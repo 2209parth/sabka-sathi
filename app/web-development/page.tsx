@@ -44,7 +44,7 @@ export default function WebDevelopmentPage() {
           <div className="prose prose-slate max-w-none bg-white/40 p-10 rounded-3xl backdrop-blur-md border border-white/50">
             <h2 className="text-3xl font-bold text-slate-900 mb-6">Your Strategic Web Development Partner in India</h2>
             <p className="text-slate-600 mb-8 leading-relaxed text-lg">
-              In today&apos;s digital landscape, your website is your most powerful salesperson. As a top **web development company in India**, Sabka Sathi focuses on a &quot;Core-First&quot; approach. We don&apos;t just build pages; we build highly-optimized, **SEO-centric conversion machines**. From **custom web app development services** to enterprise-grade digitalization, we ensure every pixel and line of code serves your business objectives.
+              In today&apos;s digital landscape, your website is your most powerful salesperson. As a top **web development company in India**, Sabka Saathi focuses on a &quot;Core-First&quot; approach. We don&apos;t just build pages; we build highly-optimized, **SEO-centric conversion machines**. From **custom web app development services** to enterprise-grade digitalization, we ensure every pixel and line of code serves your business objectives.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">

@@ -2,8 +2,8 @@ import type { MetadataRoute } from 'next';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Sabka Sathi | Modern Software Agency',
-    short_name: 'Sabka Sathi',
+    name: 'Sabka Saathi | Modern Software Agency',
+    short_name: 'Sabka Saathi',
     description: 'High-performance software and CRM solutions.',
     start_url: '/',
     display: 'standalone',

@@ -25,7 +25,7 @@ export function ContactSection() {
               </div>
               <h2 className="text-3xl font-bold text-slate-900 md:text-4xl">Message Received!</h2>
               <p className="mt-4 text-lg text-slate-600">
-                Thank you for reaching out to Sabka Sathi. Our software experts have been notified and will get back to you shortly.
+                Thank you for reaching out to Sabka Saathi. Our software experts have been notified and will get back to you shortly.
               </p>
               <Button 
                 onClick={() => window.location.reload()} 

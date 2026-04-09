@@ -44,7 +44,7 @@ export default function AppDevelopmentPage() {
           <div className="prose prose-slate max-w-none bg-white/40 p-10 rounded-3xl backdrop-blur-md border border-white/50">
             <h2 className="text-3xl font-bold text-slate-900 mb-6">Expert App Development Company in India</h2>
             <p className="text-slate-600 mb-8 leading-relaxed text-lg">
-              Mobile presence is no longer optional. As a leading **mobile app development company in India**, Sabka Sathi delivers end-to-end solutions. We manage the entire lifecycle from brainstorming and design to **App Store optimization** and launch. Whether you&apos;re a startup in Pune or an established business in Patna, we build apps that sit on the home screens of your most valuable customers.
+              Mobile presence is no longer optional. As a leading **mobile app development company in India**, Sabka Saathi delivers end-to-end solutions. We manage the entire lifecycle from brainstorming and design to **App Store optimization** and launch. Whether you&apos;re a startup in Pune or an established business in Patna, we build apps that sit on the home screens of your most valuable customers.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">

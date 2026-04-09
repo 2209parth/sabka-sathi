@@ -42,7 +42,7 @@ export default function GujaratSEOPage() {
           </div>
 
           <div className="prose prose-slate max-w-none bg-white/40 p-10 rounded-3xl backdrop-blur-md border border-white/50">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6">Why Choose Sabka Sathi in Gujarat?</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-6">Why Choose Sabka Saathi in Gujarat?</h2>
             <p className="text-slate-600 mb-8 leading-relaxed text-lg">
               As a leading **software company in Ahmedabad**, we understand the unique business landscape of Gujarat. Our team of expert developers provides end-to-end services from **web development in Rajkot** to scalable **IT company services in Surat**. We focus on building high-ROI digital assets that help startups and established enterprises reach their global potential.
             </p>

@@ -9,7 +9,7 @@ const testimonials = [
   {
     name: "Aarav Mehta",
     feedback:
-      "Sabka Sathi transformed our legacy systems into a modern SaaS platform. Their expertise is unmatched.",
+      "Sabka Saathi transformed our legacy systems into a modern SaaS platform. Their expertise is unmatched.",
     rating: 5,
   },
   {

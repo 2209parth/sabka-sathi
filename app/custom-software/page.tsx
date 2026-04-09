@@ -44,7 +44,7 @@ export default function CustomSoftwarePage() {
           <div className="prose prose-slate max-w-none bg-white/40 p-10 rounded-3xl backdrop-blur-md border border-white/50">
             <h2 className="text-3xl font-bold text-slate-900 mb-6">Expert Custom Software Development Company in India</h2>
             <p className="text-slate-600 mb-8 leading-relaxed text-lg">
-              Generic software often forces you to change your business processes. At Sabka Sathi, we do the opposite: we build software that adapts to YOUR business. As a top **custom software development company**, we specialize in high-fidelity solutions that automate complex workflows and drive revenue. Whether you need a SaaS product for a global market or a localized CRM for your Gujarat branch, we provide the technical excellence to make it happen.
+              Generic software often forces you to change your business processes. At Sabka Saathi, we do the opposite: we build software that adapts to YOUR business. As a top **custom software development company**, we specialize in high-fidelity solutions that automate complex workflows and drive revenue. Whether you need a SaaS product for a global market or a localized CRM for your Gujarat branch, we provide the technical excellence to make it happen.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">

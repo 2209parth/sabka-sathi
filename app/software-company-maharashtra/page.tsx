@@ -44,7 +44,7 @@ export default function MaharashtraSEOPage() {
           <div className="prose prose-slate max-w-none bg-white/40 p-10 rounded-3xl backdrop-blur-md border border-white/50">
             <h2 className="text-3xl font-bold text-slate-900 mb-6">Partner with the Premier IT Company in Maharashtra</h2>
             <p className="text-slate-600 mb-8 leading-relaxed text-lg">
-              Maharashtra is the powerhouse of the Indian economy, and as a top-tier **software development company in Maharashtra**, Sabka Sathi provides the technical backbone your business needs. From **web development in Mumbai** to specialized **IT services in Pune**, we deliver custom CRM, SaaS, and Cloud native applications that drive revenue and scale effortlessly.
+              Maharashtra is the powerhouse of the Indian economy, and as a top-tier **software development company in Maharashtra**, Sabka Saathi provides the technical backbone your business needs. From **web development in Mumbai** to specialized **IT services in Pune**, we deliver custom CRM, SaaS, and Cloud native applications that drive revenue and scale effortlessly.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">

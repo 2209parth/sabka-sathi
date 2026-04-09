@@ -46,7 +46,7 @@ export function Hero() {
             <Badge className="w-fit">Next-Gen Digital Solutions</Badge>
             
             <h1 className="max-w-4xl text-4xl font-semibold leading-tight text-slate-950 md:text-6xl lg:text-7xl">
-              Building Digital Excellence with Sabka Sathi
+              Building Digital Excellence with <span className="text-orange-600">Sabka Saathi</span>
             </h1>
 
             <p className="max-w-2xl text-base leading-relaxed text-slate-600 md:text-lg">

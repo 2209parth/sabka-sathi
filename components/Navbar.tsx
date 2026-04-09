@@ -62,7 +62,7 @@ export function Navbar() {
             priority
           />
           <span className="text-xl font-bold tracking-tight text-slate-900 uppercase">
-            SABKA-SATHI
+            SABKA-SAATHI
           </span>
         </a>
 

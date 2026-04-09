@@ -1,6 +1,6 @@
-# Sabka Sathi | Modern Software Agency Platform
+# Sabka Saathi | Modern Software Agency Platform
 
-**Sabka Sathi** is a premium, 3D-enhanced software agency landing page built for high conversion and brand authority. It features a custom WebGL liquid orb, real-time performance metrics, and a business-first interactive roadmap.
+**Sabka Saathi** is a premium, 3D-enhanced software agency landing page built for high conversion and brand authority. It features a custom WebGL liquid orb, real-time performance metrics, and a business-first interactive roadmap.
 
 ## 🚀 Tech Stack
 
@@ -75,4 +75,4 @@ The project is optimized for [Vercel](https://vercel.com) but can be hosted on a
 
 ---
 
-Built with ❤️ by Sabka Sathi Team
+Built with ❤️ by Sabka Saathi Team

@@ -10,7 +10,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Best Software Development Company in Gujarat, Maharashtra & Bihar | Sabka Sathi",
+  title: "Best Software Development Company in Gujarat, Maharashtra & Bihar | Sabka Saathi",
   description:
     "Looking for top software development company in Gujarat, Maharashtra or Bihar? We provide custom web, app & SaaS development services at affordable price.",
   icons: {
@@ -19,10 +19,10 @@ export const metadata: Metadata = {
     shortcut: "/logo.png",
   },
   openGraph: {
-    title: "Best Software Development Company in Gujarat, Maharashtra & Bihar | Sabka Sathi",
+    title: "Best Software Development Company in Gujarat, Maharashtra & Bihar | Sabka Saathi",
     description: "Looking for top software development company in Gujarat, Maharashtra or Bihar? Custom web, app & SaaS solutions.",
     url: "https://sabkasathi.com",
-    siteName: "Sabka Sathi",
+    siteName: "Sabka Saathi",
     images: [{ url: "/logo.png", width: 800, height: 600 }],
     locale: "en_US",
     type: "website",
@@ -37,8 +37,9 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   "@context": "https://schema.org",
+  "@id": "https://sabkasathi.com/#organization",
   "@type": "Organization",
-  "name": "Sabka Sathi",
+  "name": "Sabka Saathi",
   "url": "https://sabkasathi.com",
   "logo": "https://sabkasathi.com/logo.png",
   "description": "High-performance software development company in Gujarat, Maharashtra and Bihar.",
