@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sabka Sathi | Modern Software Agency Platform
 
-## Getting Started
+**Sabka Sathi** is a premium, 3D-enhanced software agency landing page built for high conversion and brand authority. It features a custom WebGL liquid orb, real-time performance metrics, and a business-first interactive roadmap.
 
-First, run the development server:
+## 🚀 Tech Stack
 
+- **Framework**: [Next.js 15 (App Router)](https://nextjs.org)
+- **3D Engine**: [Three.js](https://threejs.org/) via [`@react-three/fiber`](https://github.com/pmndrs/react-three-fiber)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
+- **Forms**: [Formspree](https://formspree.io/)
+- **Typography**: [Poppins](https://fonts.google.com/specimen/Poppins)
+
+## 🛠️ Getting Started
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm / pnpm / yarn
+
+### Installation
+
+1. **Clone the repository**:
+   ```bash
+   git clone <repository-url>
+   cd sabka-sathi
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Set up Environment Variables**:
+   Create a `.env.local` file in the root directory and add your Formspree ID:
+   ```env
+   NEXT_PUBLIC_FORMSPREE_ID=xlgoknzw
+   ```
+
+4. **Run the development server**:
+   ```bash
+   npm run dev
+   ```
+
+5. **Open the site**:
+   Visit [http://localhost:3000](http://localhost:3000) in your browser.
+
+## 📁 Project Structure
+
+- `/app`: Next.js App Router pages and global layouts.
+- `/components`: Custom UI components organized by section.
+  - `/ui`: Reusable atomic components (Button, Card, etc.).
+- `/lib`: Utility functions and shared helpers.
+- `/public`: Static assets (Logos, SVGs).
+
+## 🎨 Key Features
+
+- **Liquid Orbital Shader**: A custom Fresnel shader implemented in `LiquidOrb3D.tsx` to provide a premium glass-like 3D centerpiece.
+- **Interactive Roadmap**: A logic-driven 10-step process section that adapts its grid based on screen size (Horizontal on Desktop, 2x5 Grid on Mobile).
+- **Live Performance Panel**: Real-time status indicators in the Hero section to build trust via transparency.
+- **Micro-interactions**: Subtle hover effects and scroll animations using Framer Motion.
+
+## 📦 Production & Deployment
+
+### Build
+
+To create an optimized production build:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Deployment
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The project is optimized for [Vercel](https://vercel.com) but can be hosted on any provider that supports Next.js. Ensure you set the `NEXT_PUBLIC_FORMSPREE_ID` environment variable in your production dashboard.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Built with ❤️ by Sabka Sathi Team
