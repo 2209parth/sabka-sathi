@@ -133,7 +133,7 @@ export function ProcessSection() {
               Phase 01: Core Development
             </h3>
           </div>
-          <div className="grid grid-cols-2 lg:flex lg:flex-row lg:overflow-x-auto pb-4 lg:pb-12 pt-4 px-4 md:px-6 lg:px-24 lg:hide-scrollbar gap-2 lg:gap-8 lg:snap-x lg:snap-mandatory">
+          <div className="grid grid-cols-2 lg:flex lg:flex-row lg:overflow-x-auto pb-10 lg:pb-24 pt-12 px-4 md:px-6 lg:px-24 lg:hide-scrollbar gap-2 lg:gap-8 lg:snap-x lg:snap-mandatory">
             {steps.slice(0, 5).map((step, index) => (
               <StepCard key={step.title} step={step} index={index} />
             ))}
@@ -150,7 +150,7 @@ export function ProcessSection() {
               Phase 02: Growth & Scaling
             </h3>
           </div>
-          <div className="grid grid-cols-2 lg:flex lg:flex-row lg:overflow-x-auto pb-4 lg:pb-12 pt-4 px-4 md:px-6 lg:px-24 lg:hide-scrollbar gap-2 lg:gap-8 lg:snap-x lg:snap-mandatory">
+          <div className="grid grid-cols-2 lg:flex lg:flex-row lg:overflow-x-auto pb-10 lg:pb-24 pt-12 px-4 md:px-6 lg:px-24 lg:hide-scrollbar gap-2 lg:gap-8 lg:snap-x lg:snap-mandatory">
             {steps.slice(5, 10).map((step, index) => (
               <StepCard key={step.title} step={step} index={index + 5} />
             ))}
@@ -175,7 +175,7 @@ function StepCard({ step, index }: { step: ProcessStep; index: number }) {
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
       transition={{ delay: (index % 5) * 0.1 }}
-      className="flex-shrink-0 w-full lg:w-[320px] snap-center group relative"
+      className="flex-shrink-0 w-full lg:w-[245px] snap-center group relative"
     >
       {/* Flow arrow indicator (visible on lg+) */}
       {index !== 4 && index !== 9 && (
