@@ -6,13 +6,10 @@ import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
 
 const links = [
-  { label: "Home", href: "/" },
-  { label: "Web", href: "/web-development" },
-  { label: "App", href: "/app-development" },
-  { label: "Software", href: "/custom-software" },
-  { label: "Gujarat", href: "/software-company-gujarat" },
-  { label: "Maharashtra", href: "/software-company-maharashtra" },
-  { label: "Bihar", href: "/software-company-bihar" },
+  { label: "Home", href: "#home" },
+  { label: "Expertise", href: "#expertise" },
+  { label: "Process", href: "#how-it-works" },
+  { label: "Contact", href: "#contact" },
 ];
 
 interface BeforeInstallPromptEvent extends Event {

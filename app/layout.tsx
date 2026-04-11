@@ -54,6 +54,8 @@ const jsonLd = {
   }
 };
 
+import { FloatingContact } from "@/components/FloatingContact";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -68,6 +70,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         {children}
+        <FloatingContact />
         <Script
           id="service-worker-registration"
           strategy="afterInteractive"

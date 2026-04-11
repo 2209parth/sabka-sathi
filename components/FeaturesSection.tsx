@@ -9,7 +9,7 @@ const features = [
     title: "Web Development",
     description: "Modern, responsive web applications built with React & Next.js. We focus on scalability and world-class UX.",
     gradient: "from-blue-600 to-indigo-500",
-    span: "lg:col-span-4",
+    span: "lg:col-span-2",
     glow: "blue",
   },
   {
@@ -17,7 +17,7 @@ const features = [
     title: "Mobile App Development",
     description: "Native and cross-platform mobile apps for iOS and Android.",
     gradient: "from-rose-500 to-orange-500",
-    span: "lg:col-span-4",
+    span: "lg:col-span-2",
     glow: "rose",
   },
   {
@@ -25,7 +25,7 @@ const features = [
     title: "Cloud Solutions",
     description: "Scalable infrastructure and cloud-native services.",
     gradient: "from-emerald-500 to-teal-400",
-    span: "lg:col-span-4",
+    span: "lg:col-span-2",
     glow: "emerald",
   },
   {
@@ -33,7 +33,7 @@ const features = [
     title: "Premium Hosting",
     description: "1 year of high-performance hosting zero cost.",
     gradient: "from-violet-600 to-purple-500",
-    span: "lg:col-span-4",
+    span: "lg:col-span-2",
     glow: "violet",
   },
   {
@@ -41,7 +41,7 @@ const features = [
     title: "Maintenance",
     description: "1 year of complimentary maintenance.",
     gradient: "from-amber-500 to-orange-400",
-    span: "lg:col-span-4",
+    span: "lg:col-span-2",
     glow: "amber",
   },
   {
@@ -49,7 +49,7 @@ const features = [
     title: "Ultra-Fast Delivery",
     description: "Experience rapid development cycles and on-time delivery for every project milestone.",
     gradient: "from-sky-500 to-blue-400",
-    span: "lg:col-span-4",
+    span: "lg:col-span-2",
     glow: "sky",
   },
 ];
@@ -177,19 +177,51 @@ export function FeaturesSection() {
                   ))}
                 </div>
              </Card>
+ 
+             {/* Regional Office: Gujarat Card */}
+             <motion.div
+               initial={{ opacity: 0, scale: 0.95 }}
+               whileInView={{ opacity: 1, scale: 1 }}
+               viewport={{ once: true }}
+               transition={{ delay: 0.2 }}
+             >
+               <Card className="rounded-[2.5rem] p-8 md:p-10 shadow-xl border-white/60 bg-white/70 backdrop-blur-2xl group">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-500/10 text-xl text-emerald-600 group-hover:rotate-12 transition-transform">📍</div>
+                    <h4 className="text-2xl font-bold text-slate-900">Regional Office</h4>
+                  </div>
+                  
+                  <div className="grid grid-cols-1 gap-4 md:gap-6">
+                    <div>
+                      <p className="text-[9px] font-bold text-slate-500 uppercase tracking-[0.2em] mb-1">Locality</p>
+                      <p className="text-sm font-bold text-slate-700">Akshardham</p>
+                    </div>
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
+                        <p className="text-[9px] font-bold text-slate-500 uppercase tracking-[0.2em] mb-1">City</p>
+                        <p className="text-sm font-bold text-slate-700">Bhavnagar</p>
+                      </div>
+                      <div>
+                        <p className="text-[9px] font-bold text-slate-500 uppercase tracking-[0.2em] mb-1">State</p>
+                        <p className="text-sm font-bold text-slate-700">Gujarat</p>
+                      </div>
+                    </div>
+                  </div>
+               </Card>
+             </motion.div>
           </motion.div>
         </div>
 
         {/* RADICAL DARK Overhaul: Bento Grid Expertise Section */}
-        <div className="mt-40">
-          <div className="mx-auto max-w-4xl text-center mb-24 border-y border-orange-500/20 py-10">
-            <h2 className="text-3xl font-bold text-slate-900 md:text-5xl leading-tight">
+        <div className="mt-48 lg:mt-72 scroll-mt-32" id="expertise">
+          <div className="mx-auto max-w-4xl text-center mb-16 md:mb-24 border-y border-orange-500/20 py-12 backdrop-blur-sm">
+            <h2 className="text-3xl font-bold text-slate-900 md:text-6xl leading-tight">
               Design <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-rose-500 to-orange-500">Redefined.</span>
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 auto-rows-max">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-3 lg:gap-4 items-stretch">
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
@@ -197,29 +229,29 @@ export function FeaturesSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.8 }}
-                className={`group relative overflow-hidden bg-white/70 border border-white/60 backdrop-blur-xl rounded-[2.5rem] transition-all duration-700 hover:bg-white hover:shadow-2xl hover:shadow-orange-500/10 ${feature.span}`}
+                className="group relative overflow-hidden bg-white/70 border border-white/60 backdrop-blur-xl rounded-[2rem] lg:rounded-[1.5rem] transition-all duration-700 hover:bg-white hover:shadow-2xl hover:shadow-orange-500/10 h-full flex flex-col"
               >
                 {/* Neon Ambient Glow */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-[0.03] transition-opacity duration-700`} />
                 
-                <div className="h-full w-full p-10 md:p-14 flex flex-col justify-between relative z-10">
-                  <div>
-                    <div className={`inline-flex h-20 w-20 items-center justify-center rounded-[2rem] bg-gradient-to-br ${feature.gradient} text-4xl text-white shadow-[0_10px_30px_rgba(249,115,22,0.2)] group-hover:scale-110 group-hover:rotate-12 transition-all duration-500`}>
+                <div className="flex-1 w-full p-6 lg:p-5 flex flex-col justify-between relative z-10 h-full">
+                  <div className="flex flex-col">
+                    <div className={`inline-flex h-14 w-14 lg:h-12 lg:w-12 items-center justify-center rounded-[1.2rem] bg-gradient-to-br ${feature.gradient} text-2xl text-white shadow-[0_10px_30px_rgba(249,115,22,0.2)] group-hover:scale-110 group-hover:rotate-12 transition-all duration-500`}>
                       {feature.icon}
                     </div>
                     
-                    <h3 className="mt-10 text-2xl font-black text-slate-900 leading-[1.1]">
+                    <h3 className="mt-6 lg:mt-4 text-xl lg:text-[0.95rem] font-black text-slate-900 leading-[1.3]">
                       {feature.title}
                     </h3>
                   </div>
 
-                  <div className="mt-16">
-                     <p className="text-sm md:text-base text-slate-600 leading-relaxed font-medium">
+                  <div className="mt-auto pt-6 lg:pt-4">
+                     <p className="text-sm lg:text-[0.65rem] text-slate-500 leading-relaxed font-semibold">
                         {feature.description}
                      </p>
 
-                     <div className="mt-10 flex items-center gap-4 group-hover:gap-6 transition-all duration-500">
-                        <div className={`h-[2px] rounded-full bg-gradient-to-r ${feature.gradient} w-12 group-hover:w-32 transition-all duration-700`} />
+                      <div className="mt-8 lg:mt-4 flex items-center gap-4 group-hover:gap-5 transition-all duration-500">
+                        <div className={`h-[2px] rounded-full bg-gradient-to-r ${feature.gradient} w-12 lg:w-4 group-hover:w-32 lg:group-hover:w-16 transition-all duration-700`} />
                         <span className="text-[11px] font-black uppercase tracking-[0.4em] text-slate-400 group-hover:text-orange-600 transition-colors">Vision 2026</span>
                      </div>
                   </div>
