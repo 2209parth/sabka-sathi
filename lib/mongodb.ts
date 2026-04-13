@@ -1,6 +1,15 @@
 import { MongoClient } from "mongodb";
+import { env, validateEnv } from "./env";
 
-const options = {};
+// Ensure variables are present
+validateEnv();
+
+const uri = env.MONGODB_URI;
+const options = {
+  maxPoolSize: 10,
+  serverSelectionTimeoutMS: 5000,
+  socketTimeoutMS: 45000,
+};
 
 declare global {
   var _mongoClientPromise: Promise<MongoClient> | undefined;
@@ -9,13 +18,7 @@ declare global {
 let clientPromise: Promise<MongoClient> | null = null;
 
 export function getMongoClientPromise() {
-  const uri = process.env.MONGODB_URI;
-
-  if (!uri) {
-    throw new Error("MONGODB_URI is not defined");
-  }
-
-  if (process.env.NODE_ENV === "development") {
+  if (env.isDev) {
     if (!global._mongoClientPromise) {
       const client = new MongoClient(uri, options);
       global._mongoClientPromise = client.connect();

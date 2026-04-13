@@ -33,6 +33,7 @@ export function Hero() {
             alt=""
             fill
             className="pointer-events-none rounded-[2rem] object-cover opacity-95"
+            priority
           />
           <div className="pointer-events-none absolute inset-0 rounded-[2rem] bg-[linear-gradient(180deg,rgba(255,255,255,0.35)_0%,rgba(255,255,255,0.08)_40%,rgba(255,255,255,0.24)_100%)]" />
 
@@ -130,7 +131,7 @@ export function Hero() {
           </motion.div>
 
           {/* Massive Central Orb (Layered) */}
-          <div className="absolute top-1/2 left-1/2 z-10 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+          <div className="absolute top-1/2 left-1/2 z-10 -translate-x-1/2 -translate-y-1/2 pointer-events-none scale-50 md:scale-100 opacity-30 md:opacity-100">
             <LiquidOrb3D />
           </div>
 

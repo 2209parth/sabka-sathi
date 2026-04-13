@@ -1,22 +1,74 @@
 import { MetadataRoute } from 'next';
-import { locationContent } from '@/lib/content';
+import { locationContent, expertiseContent, processContent } from '@/lib/content';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const locationRoutes = Object.keys(locationContent).map((slug) => ({
-    url: `https://sabkasathi.com/location/${slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.9,
-  }));
+  const baseUrl = 'https://sabkasathi.com';
 
-  return [
-    {
-      url: 'https://sabkasathi.com',
+  const dynamicRoutes = [
+    ...Object.keys(locationContent).map((slug) => ({
+      url: `${baseUrl}/location/${slug}`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    })),
+    ...Object.keys(expertiseContent).map((slug) => ({
+      url: `${baseUrl}/expertise/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.9,
+    })),
+    ...Object.keys(processContent).map((slug) => ({
+      url: `${baseUrl}/process/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    })),
+  ];
+
+  const staticRoutes = [
+    {
+      url: baseUrl,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
       priority: 1,
     },
-    ...locationRoutes,
-    // Add other routes here as they become available
+    {
+      url: `${baseUrl}/about`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/services`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/industries`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/contact`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 1,
+    },
+    {
+      url: `${baseUrl}/faq`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/trust`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.5,
+    },
   ];
+
+  return [...staticRoutes, ...dynamicRoutes];
 }

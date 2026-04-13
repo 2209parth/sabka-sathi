@@ -53,7 +53,7 @@ export function FloatingContact() {
   ];
 
   return (
-    <div className="fixed bottom-6 right-6 z-[9999] flex flex-col gap-4">
+    <div className="fixed bottom-6 right-6 z-[9999] flex flex-col gap-4 pointer-events-none">
       <AnimatePresence>
         {isVisible && buttons.map((btn) => (
           <motion.a
@@ -75,13 +75,13 @@ export function FloatingContact() {
               boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)"
             }}
             whileTap={{ scale: 0.9 }}
-            className={`group relative flex h-14 w-14 items-center justify-center rounded-2xl text-white shadow-lg transition-colors ${btn.color}`}
+            className={`group relative pointer-events-auto flex h-14 w-14 items-center justify-center rounded-2xl text-white shadow-lg transition-colors ${btn.color} ring-4 ring-white/10 backdrop-blur-sm`}
             aria-label={btn.label}
           >
             {btn.icon}
             
             {/* Tooltip */}
-            <span className="absolute right-full mr-4 rounded-lg bg-slate-900 px-3 py-1.5 text-xs font-bold text-white opacity-0 transition-opacity group-hover:opacity-100 whitespace-nowrap pointer-events-none">
+            <span className="absolute right-full mr-4 rounded-lg bg-slate-900 px-3 py-1.5 text-xs font-bold text-white opacity-0 transition-opacity group-hover:opacity-100 whitespace-nowrap pointer-events-none shadow-xl">
               {btn.label}
               {/* Arrow */}
               <span className="absolute left-full top-1/2 -ml-1 -translate-y-1/2 border-4 border-transparent border-l-slate-900" />
@@ -91,6 +91,9 @@ export function FloatingContact() {
             {btn.id === "whatsapp" && (
               <span className="absolute inset-0 -z-10 animate-ping rounded-2xl bg-[#25D366] opacity-20" />
             )}
+            
+            {/* Background protection ring to ensure readable text behind */}
+            <div className="absolute inset-0 -z-20 bg-white/5 rounded-[2.5rem] scale-150 blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
           </motion.a>
         ))}
       </AnimatePresence>
