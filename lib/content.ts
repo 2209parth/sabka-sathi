@@ -265,6 +265,7 @@ export const expertiseContent: Record<string, DetailedContent> = {
     longDescription: "We build web applications that are as fast as they are beautiful. Using the latest technologies like Next.js 15, we ensure your site is optimized for speed, SEO, and user experience. Whether it's a simple landing page or a complex SaaS platform, we deliver clean code and premium designs.",
     features: ["Responsive Design", "SEO Optimization", "PWA Support", "CMS Integration"],
     benefits: ["Faster Load Times", "Better Google Rankings", "Improved User Experience"],
+    technologies: ["Next.js 15", "React", "TypeScript", "Tailwind CSS", "Node.js"],
     gradient: "from-blue-600 to-indigo-500"
   },
   "mobile-app": {
@@ -276,6 +277,7 @@ export const expertiseContent: Record<string, DetailedContent> = {
     longDescription: "Get your business into your customers' pockets. We build mobile apps using React Native or Flutter, providing a native look and feel on both iOS and Android with a single codebase. Focus on performance and smooth animations.",
     features: ["App Store Submission", "Push Notifications", "Offline Support", "Biometric Auth"],
     benefits: ["Wider Customer Reach", "Higher Brand Loyalty", "Direct Marketing Channel"],
+    technologies: ["React Native", "Flutter", "Swift", "Kotlin", "Firebase"],
     gradient: "from-rose-500 to-orange-500"
   },
   "cloud-solutions": {
@@ -287,6 +289,7 @@ export const expertiseContent: Record<string, DetailedContent> = {
     longDescription: "Migrate to the cloud for better reliability and lower costs. We design and manage cloud architectures on AWS, Azure, or Google Cloud. We focus on auto-scaling and cost-optimization to ensure you only pay for what you use.",
     features: ["AWS/Azure Management", "Dockerization", "Serverless Setup", "Cloud Migration"],
     benefits: ["No Hardware Costs", "99.99% Reliability", "Instant Scalability"],
+    technologies: ["AWS", "Azure", "Docker", "Kubernetes", "Linux"],
     gradient: "from-emerald-500 to-teal-400"
   },
   "hosting": {
@@ -298,6 +301,7 @@ export const expertiseContent: Record<string, DetailedContent> = {
     longDescription: "We provide enterprise-grade hosting for all our clients. With global CDNs and edge computing, your website will load in milliseconds regardless of where your users are. Secure SSL and automated backups included.",
     features: ["Free SSL", "Daily Backups", "Managed Servers", "24/7 Uptime"],
     benefits: ["Blazing Fast Speed", "Always Online", "Zero Hosting Effort"],
+    technologies: ["Vercel", "DigitalOcean", "Cloudflare", "Nginx", "Redis"],
     gradient: "from-violet-600 to-purple-500"
   },
   "maintenance": {
@@ -309,6 +313,7 @@ export const expertiseContent: Record<string, DetailedContent> = {
     longDescription: "We don't just build and leave. We provide active maintenance to fix bugs, update dependencies, and keep your site secure. Our monthly health checks ensure your business stays online and running smoothly.",
     features: ["Security Updates", "Bug Fixes", "Uptime Monitoring", "Minor Tweaks"],
     benefits: ["Always Up-to-Date", "Professional Support", "Zero Downtime"],
+    technologies: ["New Relic", "Sentry", "Cloudwatch", "GitHub Actions", "Dependabot"],
     gradient: "from-amber-500 to-orange-400"
   },
   "delivery": {
@@ -320,6 +325,7 @@ export const expertiseContent: Record<string, DetailedContent> = {
     longDescription: "Time to market is critical. Our agile development process allows us to ship high-quality features in record time. Most of our MVPs are ready for launch in just 4-6 weeks without compromising on quality or design.",
     features: ["Agile Sprints", "Daily Updates", "Rapid Prototyping", "MVP Focus"],
     benefits: ["Outpace Competitors", "Faster ROI", "Quick Feedback Loops"],
+    technologies: ["Jira", "Figma", "Slack", "Notion", "Linear"],
     gradient: "from-sky-500 to-blue-400"
   }
 };

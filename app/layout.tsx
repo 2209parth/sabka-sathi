@@ -10,6 +10,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://sabkasathi.com"),
   title: "Best Software Development Company in Gujarat, Maharashtra & Bihar | Sabka Saathi",
   description:
     "Looking for top software development company in Gujarat, Maharashtra or Bihar? We provide custom web, app & SaaS development services at affordable price.",
@@ -49,7 +50,7 @@ const jsonLd = {
   },
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+91-XXXXXXXXXX",
+    "telephone": "+91-9431673018",
     "contactType": "customer service"
   }
 };
