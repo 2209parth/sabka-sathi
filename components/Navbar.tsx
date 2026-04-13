@@ -1,15 +1,16 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
 
 const links = [
-  { label: "Home", href: "#home" },
-  { label: "Expertise", href: "#expertise" },
-  { label: "Process", href: "#how-it-works" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "Expertise", href: "/#expertise" },
+  { label: "Process", href: "/#how-it-works" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 interface BeforeInstallPromptEvent extends Event {
@@ -49,7 +50,7 @@ export function Navbar() {
   return (
     <header className="sticky top-4 z-50 px-4">
       <nav className="mx-auto flex w-full max-w-7xl items-center justify-between rounded-full border border-white/60 bg-white/30 px-5 py-3 shadow-[0_8px_35px_rgba(35,72,145,0.2)] backdrop-blur-xl md:px-7">
-        <a href="#home" className="flex items-center gap-3">
+        <Link href="/" className="flex items-center gap-3">
           <Image
             src="/logo.png"
             alt="Logo"
@@ -61,13 +62,13 @@ export function Navbar() {
           <span className="text-xl font-bold tracking-tight text-slate-900 uppercase">
             SABKA-SAATHI
           </span>
-        </a>
+        </Link>
 
         <div className="hidden items-center gap-7 md:flex">
           {links.map((link) => (
-            <a key={link.href} href={link.href} className="text-sm font-medium text-slate-700 hover:text-slate-950">
+            <Link key={link.href} href={link.href} className="text-sm font-medium text-slate-700 hover:text-orange-600 transition-colors">
               {link.label}
-            </a>
+            </Link>
           ))}
         </div>
 
@@ -93,14 +94,14 @@ export function Navbar() {
       >
         <div className="flex flex-col gap-3">
           {links.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
-              className="rounded-xl px-4 py-2 text-sm font-medium text-slate-700 hover:bg-white"
+              className="rounded-xl px-4 py-2 text-sm font-medium text-slate-700 hover:bg-orange-50 hover:text-orange-600 transition-all"
               onClick={() => setOpen(false)}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
           <Button onClick={handleInstall} className="mt-2 w-full">Download App</Button>
         </div>

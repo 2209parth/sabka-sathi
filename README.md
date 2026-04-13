@@ -47,18 +47,28 @@
 
 ## 📁 Project Structure
 
-- `/app`: Next.js App Router pages and global layouts.
+- `/app`: Next.js App Router pages and dynamic subpages (`/process`, `/expertise`, `/location`).
 - `/components`: Custom UI components organized by section.
   - `/ui`: Reusable atomic components (Button, Card, etc.).
-- `/lib`: Utility functions and shared helpers.
+- `/lib`: Utility functions and **centralized content management** (`content.ts`).
 - `/public`: Static assets (Logos, SVGs).
 
 ## 🎨 Key Features
 
 - **Liquid Orbital Shader**: A custom Fresnel shader implemented in `LiquidOrb3D.tsx` to provide a premium glass-like 3D centerpiece.
-- **Interactive Roadmap**: A logic-driven 10-step process section that adapts its grid based on screen size (Horizontal on Desktop, 2x5 Grid on Mobile).
-- **Live Performance Panel**: Real-time status indicators in the Hero section to build trust via transparency.
+- **Dynamic Multi-Page Expansion**: Using Next.js dynamic routes (`[slug]`) to generate 20+ detailed pages from a single template, powered by a centralized content engine in `lib/content.ts`.
+- **Interactive Roadmap**: A logic-driven 10-step process section that adapts its grid based on screen size.
 - **Micro-interactions**: Subtle hover effects and scroll animations using Framer Motion.
+- **GST-Ready Business Profile**: Integrated legal and transparency details for Bihar and Gujarat offices.
+
+## 📝 Adding New Content
+
+To add a new process step, expertise area, or location:
+
+1. Open `lib/content.ts`.
+2. Add a new entry to the corresponding `Record` object (e.g., `processContent`, `expertiseContent`).
+3. Ensure the `slug` matches the key used in the record.
+4. The page will be automatically generated at build time via `generateStaticParams`.
 
 ## 📦 Production & Deployment
 

@@ -5,12 +5,18 @@ import { motion } from "motion/react";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { useEffect, useState } from "react";
+interface SubmissionData {
+  name: string;
+  service: string;
+  budget: string;
+  timeline: string;
+}
 
 export function ContactSection() {
   // Use environment variable for the Formspree ID, with the current ID as a fallback for dev stability.
   const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID || "xlgoknzw";
   const [state, handleSubmit] = useForm(FORMSPREE_ID);
-  const [lastSubmission, setLastSubmission] = useState<any>(null);
+  const [lastSubmission, setLastSubmission] = useState<SubmissionData | null>(null);
   const [phone, setPhone] = useState("");
 
   // Custom handler to capture form data before submission
@@ -18,7 +24,7 @@ export function ContactSection() {
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
-    const values = Object.fromEntries(data.entries());
+    const values = Object.fromEntries(data.entries()) as unknown as SubmissionData;
     setLastSubmission(values);
     
     // Call Formspree's handleSubmit

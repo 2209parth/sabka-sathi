@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/Card";
+import Link from "next/link";
 
 const features = [
   {
@@ -11,6 +12,7 @@ const features = [
     gradient: "from-blue-600 to-indigo-500",
     span: "lg:col-span-2",
     glow: "blue",
+    slug: "web-development"
   },
   {
     icon: "📱",
@@ -19,6 +21,7 @@ const features = [
     gradient: "from-rose-500 to-orange-500",
     span: "lg:col-span-2",
     glow: "rose",
+    slug: "mobile-app"
   },
   {
     icon: "☁️",
@@ -27,6 +30,7 @@ const features = [
     gradient: "from-emerald-500 to-teal-400",
     span: "lg:col-span-2",
     glow: "emerald",
+    slug: "cloud-solutions"
   },
   {
     icon: "💎",
@@ -35,6 +39,7 @@ const features = [
     gradient: "from-violet-600 to-purple-500",
     span: "lg:col-span-2",
     glow: "violet",
+    slug: "hosting"
   },
   {
     icon: "⚙️",
@@ -43,6 +48,7 @@ const features = [
     gradient: "from-amber-500 to-orange-400",
     span: "lg:col-span-2",
     glow: "amber",
+    slug: "maintenance"
   },
   {
     icon: "⚡",
@@ -51,18 +57,19 @@ const features = [
     gradient: "from-sky-500 to-blue-400",
     span: "lg:col-span-2",
     glow: "sky",
+    slug: "delivery"
   },
 ];
 
 export function FeaturesSection() {
   const branches = [
-    { name: "Bihar", cities: "Patna, Gaya, Biharsharif, Lakhisarai, Sheikhpura, Nawada, Warsaliganj, Nalanda, Munger, Jamui", isMain: true },
-    { name: "Gujarat", cities: "Gandhinagar, Surat, Ahmedabad" },
+    { name: "Bihar", slug: "bihar", cities: "Patna, Gaya, Biharsharif, Lakhisarai, Sheikhpura, Nawada, Warsaliganj, Nalanda, Munger, Jamui", isMain: true },
+    { name: "Gujarat", slug: "gujarat", cities: "Gandhinagar, Surat, Ahmedabad" },
     { name: "Uttar Pradesh" },
     { name: "Haryana", cities: "Gurugram etc" },
     { name: "Uttarakhand" },
     { name: "Madhya Pradesh" },
-    { name: "Maharashtra" },
+    { name: "Maharashtra", slug: "maharashtra" },
     { name: "Delhi" },
     { name: "Goa" },
     { name: "Jharkhand", cities: "Tata, Jamshedpur etc" },
@@ -112,20 +119,30 @@ export function FeaturesSection() {
             </div>
  
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-3">
-              {branches.map((branch, index) => (
-                <div
-                  key={branch.name}
-                  className={`flex flex-col p-3 rounded-xl border transition-all duration-300 ${
-                    branch.isMain 
-                      ? "bg-orange-500 text-white border-orange-400 shadow-xl shadow-orange-500/20" 
-                      : "bg-slate-100/50 text-slate-600 border-slate-200/50 hover:border-orange-500/50 hover:bg-white hover:shadow-md"
-                  }`}
-                >
-                  <span className={`${branch.isMain ? "text-[10px]" : "text-[9px]"} font-bold leading-tight`}>{branch.name}</span>
-                  {branch.isMain && (
-                    <span className="mt-1 text-[7px] text-orange-100 uppercase font-black">Main Hub</span>
-                  )}
-                </div>
+              {branches.map((branch) => (
+                branch.slug ? (
+                  <Link
+                    key={branch.name}
+                    href={`/location/${branch.slug}`}
+                    className={`flex flex-col p-3 rounded-xl border transition-all duration-300 ${
+                      branch.isMain 
+                        ? "bg-orange-500 text-white border-orange-400 shadow-xl shadow-orange-500/20" 
+                        : "bg-slate-100/50 text-slate-600 border-slate-200/50 hover:border-orange-500/50 hover:bg-white hover:shadow-md"
+                    }`}
+                  >
+                    <span className={`${branch.isMain ? "text-[10px]" : "text-[9px]"} font-bold leading-tight`}>{branch.name}</span>
+                    {branch.isMain && (
+                      <span className="mt-1 text-[7px] text-orange-100 uppercase font-black">Main Hub</span>
+                    )}
+                  </Link>
+                ) : (
+                  <div
+                    key={branch.name}
+                    className="flex flex-col p-3 rounded-xl border bg-slate-100/5 text-slate-400 border-slate-200/20 cursor-not-allowed opacity-50"
+                  >
+                    <span className="text-[9px] font-bold leading-tight">{branch.name}</span>
+                  </div>
+                )
               ))}
             </div>
           </motion.div>
@@ -229,33 +246,38 @@ export function FeaturesSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.8 }}
-                className="group relative overflow-hidden bg-white/70 border border-white/60 backdrop-blur-xl rounded-[2rem] lg:rounded-[1.5rem] transition-all duration-700 hover:bg-white hover:shadow-2xl hover:shadow-orange-500/10 h-full flex flex-col"
+                className="h-full"
               >
-                {/* Neon Ambient Glow */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-[0.03] transition-opacity duration-700`} />
-                
-                <div className="flex-1 w-full p-6 lg:p-5 flex flex-col justify-between relative z-10 h-full">
-                  <div className="flex flex-col">
-                    <div className={`inline-flex h-14 w-14 lg:h-12 lg:w-12 items-center justify-center rounded-[1.2rem] bg-gradient-to-br ${feature.gradient} text-2xl text-white shadow-[0_10px_30px_rgba(249,115,22,0.2)] group-hover:scale-110 group-hover:rotate-12 transition-all duration-500`}>
-                      {feature.icon}
+                <Link
+                  href={`/expertise/${feature.slug}`}
+                  className="group relative overflow-hidden bg-white/70 border border-white/60 backdrop-blur-xl rounded-[2rem] lg:rounded-[1.5rem] transition-all duration-700 hover:bg-white hover:shadow-2xl hover:shadow-orange-500/10 h-full flex flex-col"
+                >
+                  {/* Neon Ambient Glow */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-[0.03] transition-opacity duration-700`} />
+                  
+                  <div className="flex-1 w-full p-6 lg:p-5 flex flex-col justify-between relative z-10 h-full">
+                    <div className="flex flex-col">
+                      <div className={`inline-flex h-14 w-14 lg:h-12 lg:w-12 items-center justify-center rounded-[1.2rem] bg-gradient-to-br ${feature.gradient} text-2xl text-white shadow-[0_10px_30px_rgba(249,115,22,0.2)] group-hover:scale-110 group-hover:rotate-12 transition-all duration-500`}>
+                        {feature.icon}
+                      </div>
+                      
+                      <h3 className="mt-6 lg:mt-4 text-xl lg:text-[0.95rem] font-black text-slate-900 leading-[1.3]">
+                        {feature.title}
+                      </h3>
                     </div>
-                    
-                    <h3 className="mt-6 lg:mt-4 text-xl lg:text-[0.95rem] font-black text-slate-900 leading-[1.3]">
-                      {feature.title}
-                    </h3>
-                  </div>
 
-                  <div className="mt-auto pt-6 lg:pt-4">
-                     <p className="text-sm lg:text-[0.65rem] text-slate-500 leading-relaxed font-semibold">
-                        {feature.description}
-                     </p>
+                    <div className="mt-auto pt-6 lg:pt-4">
+                       <p className="text-sm lg:text-[0.65rem] text-slate-500 leading-relaxed font-semibold">
+                          {feature.description}
+                       </p>
 
-                      <div className="mt-8 lg:mt-4 flex items-center gap-4 group-hover:gap-5 transition-all duration-500">
-                        <div className={`h-[2px] rounded-full bg-gradient-to-r ${feature.gradient} w-12 lg:w-4 group-hover:w-32 lg:group-hover:w-16 transition-all duration-700`} />
-                        <span className="text-[11px] font-black uppercase tracking-[0.4em] text-slate-400 group-hover:text-orange-600 transition-colors">Vision 2026</span>
-                     </div>
+                        <div className="mt-8 lg:mt-4 flex items-center gap-4 group-hover:gap-5 transition-all duration-500">
+                          <div className={`h-[2px] rounded-full bg-gradient-to-r ${feature.gradient} w-12 lg:w-4 group-hover:w-32 lg:group-hover:w-16 transition-all duration-700`} />
+                          <span className="text-[11px] font-black uppercase tracking-[0.4em] text-slate-400 group-hover:text-orange-600 transition-colors">Learn More</span>
+                       </div>
+                    </div>
                   </div>
-                </div>
+                </Link>
               </motion.div>
             ))}
           </div>
