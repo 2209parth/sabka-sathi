@@ -1,6 +1,14 @@
 import { MetadataRoute } from 'next';
+import { locationContent } from '@/lib/content';
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const locationRoutes = Object.keys(locationContent).map((slug) => ({
+    url: `https://sabkasathi.com/location/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.9,
+  }));
+
   return [
     {
       url: 'https://sabkasathi.com',
@@ -8,12 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 1,
     },
-    { url: 'https://sabkasathi.com/software-company-gujarat', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
-    { url: 'https://sabkasathi.com/software-company-maharashtra', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
-    { url: 'https://sabkasathi.com/software-company-bihar', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
-    { url: 'https://sabkasathi.com/web-development', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
-    { url: 'https://sabkasathi.com/app-development', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
-    { url: 'https://sabkasathi.com/custom-software', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    ...locationRoutes,
     // Add other routes here as they become available
   ];
 }
