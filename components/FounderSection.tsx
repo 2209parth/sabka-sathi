@@ -1,5 +1,6 @@
 "use client";
 
+import { Button } from "@/components/ui/Button";
 import Link from "next/link";
 import Image from "next/image";
 import { User } from "lucide-react";

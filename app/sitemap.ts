@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { locationContent, expertiseContent, processContent } from '@/lib/content';
+import { blogPosts } from '@/lib/blogs';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://sabkasathi.com';
@@ -22,6 +23,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
       priority: 0.7,
+    })),
+    ...Object.keys(blogPosts).map((slug) => ({
+      url: `${baseUrl}/blog/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
     })),
   ];
 
